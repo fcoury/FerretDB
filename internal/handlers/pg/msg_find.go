@@ -34,7 +34,6 @@ func (h *Handler) MsgFind(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, er
 
 	unimplementedFields := []string{
 		"skip",
-		"returnKey",
 		"showRecordId",
 		"tailable",
 		"oplogReplay",
@@ -56,6 +55,7 @@ func (h *Handler) MsgFind(ctx context.Context, msg *wire.OpMsg) (*wire.OpMsg, er
 		"readConcern",
 		"max",
 		"min",
+		"returnKey",
 	}
 	common.Ignored(document, h.l, ignoredFields...)
 
